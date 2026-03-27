@@ -4,6 +4,8 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Check, Star, Camera, Users, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import taghazoutImg from "@/assets/taghazout.jpg";
+
 const features = [
   {
     icon: Star,
@@ -34,7 +36,11 @@ export const FlyTaghazoutSection = () => {
     >
       {/* Background Image */}
       <div className="absolute inset-0">
-        <img src="/images/taghazout.jpg" alt="Vue aérienne de Taghazout" className="w-full h-full object-cover" />
+        <img
+          src="/images/taghazout.jpg"
+          alt="Vue aérienne de Taghazout"
+          className="w-full h-full object-cover"
+        />
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/70" />
       </div>
 
@@ -87,9 +93,14 @@ export const FlyTaghazoutSection = () => {
               ))}
             </div>
 
-            <Button variant="hero" size="xl" asChild>
-              <a href="#reservation">Réserver FLY TAGHAZOUT</a>
-            </Button>
+            <div className="flex gap-4 items-center">
+              <Button variant="hero" size="xl" asChild>
+                <a href="#reservation">Réserver FLY TAGHAZOUT</a>
+              </Button>
+              <Button variant="heroOutline" size="xl" asChild>
+                <a href="https://flytaghazout.com" target="_blank" rel="noopener noreferrer">Explorer FLY TAGHAZOUT</a>
+              </Button>
+            </div>
           </motion.div>
 
           {/* Visual Side */}

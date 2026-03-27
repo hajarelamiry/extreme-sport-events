@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { Instagram, Facebook, Youtube, MapPin, Phone, Mail } from "lucide-react";
-
+import logo from "@/assets/logo.png";
 
 const footerLinks = {
   activities: [
@@ -112,7 +112,7 @@ export const Footer = () => {
                   href="tel:+212600000000"
                   className="text-muted-foreground hover:text-primary transition-colors text-sm"
                 >
-                  +212 6 00 00 00 00
+                  +212 661-447158
                 </a>
               </li>
               <li className="flex items-center gap-3">
@@ -134,7 +134,7 @@ export const Footer = () => {
         <div className="container mx-auto px-4 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-sm text-muted-foreground">
-              © {new Date().getFullYear()} HOVERSWITCH. Tous droits réservés.
+              © {new Date().getFullYear()} HOVERSWITCH, propulsé par MonarkIT. Tous droits réservés.
             </p>
             <div className="flex items-center gap-6">
               <a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">

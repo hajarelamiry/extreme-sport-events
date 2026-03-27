@@ -4,9 +4,10 @@ import { AboutSection } from "@/components/AboutSection";
 import { ActivitiesSection } from "@/components/ActivitiesSection";
 import { FlyTaghazoutSection } from "@/components/FlyTaghazoutSection";
 import { DestinationsSection } from "@/components/DestinationsSection";
-import { WhyUsSection } from "@/components/WhyUsSection";
 import { ReservationSection } from "@/components/ReservationSection";
 import { Footer } from "@/components/Footer";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { WhyUsSection } from "@/components/WhyUsSection";
 
 const Index = () => {
   return (
@@ -20,6 +21,7 @@ const Index = () => {
       <WhyUsSection />
       <ReservationSection />
       <Footer />
+      <WhatsAppButton />
     </main>
   );
 };

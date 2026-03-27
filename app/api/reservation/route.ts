@@ -49,7 +49,8 @@ export async function POST(request: NextRequest) {
 
     const name         = e(body.name);
     const phone        = e(body.phone);
-    const activity     = e(body.activity);
+    const activitiesRaw: string[] = Array.isArray(body.activities) ? body.activities : [];
+    const activity = activitiesRaw.map(a => e(a)).join(", ");
     const date         = e(body.date);
     const participants = e(body.participants);
     const message      = e(body.message);

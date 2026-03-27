@@ -8,29 +8,32 @@ import { Button } from "@/components/ui/button";
 const destinations = [
   {
     name: "Marrakech",
-    description: "Vols en montgolfière, parachutisme et expériences aériennes dans un décor unique. Une destination iconique pour vivre des moments forts au lever du soleil.",
+    description:
+      "Vols en montgolfière, parachutisme et expériences aériennes dans un décor unique. Une destination iconique pour vivre des moments forts au lever du soleil.",
     icon: Sun,
-    activities: ["Montgolfière", "Parachutisme"],
+    activities: ["Montgolfière", "Parapente"],
     color: "from-orange-500/20 to-red-500/20",
   },
   {
     name: "Agadir",
-    description: "Un environnement idéal pour les sports aériens grâce à ses plages infinies, ses vents réguliers et ses paysages variés. Parfait pour des vols immersifs et fluides.",
+    description:
+      "Un environnement idéal pour les sports aériens grâce à ses plages infinies, ses vents réguliers et ses paysages variés. Parfait pour des vols immersifs et fluides.",
     icon: Waves,
     activities: ["Paramoteur", "Parapente"],
     color: "from-blue-500/20 to-cyan-500/20",
   },
   {
     name: "Taghazout",
-    description: "Le spot privilégié pour le paramoteur et l'activité phare FLY TAGHAZOUT. Une zone magnifique réputée pour ses panoramas exceptionnels et son atmosphère surf.",
+    description:
+      "Le spot privilégié pour le paramoteur et l'activité phare FLY TAGHAZOUT. Une zone magnifique réputée pour ses panoramas exceptionnels et son atmosphère surf.",
     icon: Plane,
-    activities: ["FLY TAGHAZOUT", "Paramoteur"],
+    activities: ["Parapente", "Paramoteur"],
     color: "from-primary/20 to-orange-500/20",
     featured: true,
   },
 ];
 
-const otherDestinations = ["Essaouira", "Ouarzazate", "Beni Mellal", "Dakhla", "Oualidia"];
+const otherDestinations = ["Beni Mellal", "Taroudant"];
 
 export const DestinationsSection = () => {
   const ref = useRef(null);
@@ -52,12 +55,9 @@ export const DestinationsSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <span className="text-primary font-display text-xl tracking-wider mb-4 block">
-            ZONES D'INTERVENTION
-          </span>
+          <span className="text-primary font-display text-xl tracking-wider mb-4 block">ZONES D'INTERVENTION</span>
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-foreground leading-tight mb-6">
-            Où profiter de vos aventures{" "}
-            <span className="text-gradient">au Maroc</span>
+            Où profiter de vos aventures <span className="text-gradient">au Maroc</span>
           </h2>
         </motion.div>
 
@@ -78,28 +78,24 @@ export const DestinationsSection = () => {
               {/* Featured Badge */}
               {destination.featured && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 bg-primary rounded-full">
-                  <span className="text-xs font-bold text-primary-foreground uppercase tracking-wider">
-                    Populaire
-                  </span>
+                  <span className="text-xs font-bold text-primary-foreground uppercase tracking-wider">Populaire</span>
                 </div>
               )}
 
               {/* Icon */}
-              <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${destination.color} flex items-center justify-center mb-6`}>
+              <div
+                className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${destination.color} flex items-center justify-center mb-6`}
+              >
                 <destination.icon className="w-8 h-8 text-primary" />
               </div>
 
               {/* Content */}
               <div className="flex items-center gap-2 mb-4">
                 <MapPin className="w-5 h-5 text-primary" />
-                <h3 className="font-display text-3xl text-foreground">
-                  {destination.name}
-                </h3>
+                <h3 className="font-display text-3xl text-foreground">{destination.name}</h3>
               </div>
 
-              <p className="text-muted-foreground mb-6 leading-relaxed">
-                {destination.description}
-              </p>
+              <p className="text-muted-foreground mb-6 leading-relaxed">{destination.description}</p>
 
               {/* Activities Tags */}
               <div className="flex flex-wrap gap-2">
@@ -123,9 +119,7 @@ export const DestinationsSection = () => {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="text-center"
         >
-          <h3 className="font-display text-2xl text-foreground mb-4">
-            Autres destinations au Maroc
-          </h3>
+          <h3 className="font-display text-2xl text-foreground mb-4">Autres destinations au Maroc</h3>
           <p className="text-muted-foreground mb-6">
             Sur demande, nous organisons des expériences dans des lieux exclusifs :
           </p>

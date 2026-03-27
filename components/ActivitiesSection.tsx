@@ -4,7 +4,6 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
 const activities = [
   {
     id: "paramoteur",

@@ -73,7 +73,6 @@
 
   html {
     scroll-behavior: smooth;
-    overflow-x: hidden; /* ✅ fix ajouté */
     max-width: 100%; /* ✅ fix ajouté */
   }
 

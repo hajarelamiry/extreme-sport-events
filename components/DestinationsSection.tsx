@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { MapPin, Plane, Sun, Waves } from "lucide-react";
+import { MapPin, Plane, Sun, Waves, Mountain } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const destinations = [
@@ -31,6 +31,14 @@ const destinations = [
     color: "from-primary/20 to-orange-500/20",
     featured: true,
   },
+  {
+  name: "Taroudant & Beni Mellal",
+  description:
+    "Les deux zones incontournables du Maroc pour le parachutisme. Sauts spectaculaires avec des paysages variés entre plaines, montagnes et horizons dégagés.",
+  icon: Mountain,
+  activities: ["Parachutisme"],
+  color: "from-green-500/20 to-emerald-500/20",
+},
 ];
 
 const otherDestinations = ["Beni Mellal", "Taroudant"];
@@ -62,7 +70,7 @@ export const DestinationsSection = () => {
         </motion.div>
 
         {/* Main Destinations */}
-        <div className="grid md:grid-cols-3 gap-6 lg:gap-8 mb-12">
+        <div className="grid md:grid-cols-2 gap-6 lg:gap-8 mb-12" >
           {destinations.map((destination, index) => (
             <motion.article
               key={destination.name}
@@ -119,20 +127,8 @@ export const DestinationsSection = () => {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="text-center"
         >
-          <h3 className="font-display text-2xl text-foreground mb-4">Autres destinations au Maroc</h3>
-          <p className="text-muted-foreground mb-6">
-            Sur demande, nous organisons des expériences dans des lieux exclusifs :
-          </p>
-          <div className="flex flex-wrap justify-center gap-3 mb-8">
-            {otherDestinations.map((dest) => (
-              <span
-                key={dest}
-                className="px-4 py-2 rounded-full bg-secondary text-secondary-foreground text-sm font-medium border border-border"
-              >
-                {dest}
-              </span>
-            ))}
-          </div>
+          
+          
           <Button variant="outline" size="lg" asChild>
             <a href="#reservation">Demander une disponibilité</a>
           </Button>

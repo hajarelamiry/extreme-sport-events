@@ -2,18 +2,23 @@
 import { motion } from "framer-motion";
 import { ChevronDown, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
+
 export const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image with Overlay */}
+      {/* Background Image — no scale, simple dark overlay */}
       <div className="absolute inset-0">
         <img
           src="/images/hero-bg.jpg"
           alt="Paramoteur au-dessus des falaises du Maroc"
-          className="w-full h-full object-cover scale-105"
+          className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background" />
-        <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-transparent to-transparent" />
+        {/* Overlay de base */}
+        <div className="absolute inset-0 bg-white/20" />
+        {/* Gradient du bas vers le haut — assombrit la zone du texte */}
+        <div className="absolute inset-0 bg-gradient-to-t from-white/30 via-transparent to-transparent" />
+        {/* Gradient du centre vers les bords — crée un vignettage */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_40%,_rgba(0,0,0,0.5)_100%)]" />
       </div>
 
       {/* Animated Particles/Lines Effect */}
@@ -63,7 +68,7 @@ export const HeroSection = () => {
             Vivez{" "}
             <span className="text-gradient">l'Adrénaline</span>
             <br />
-            <span className="text-muted-foreground/80">des Sports Extrêmes</span>
+            <span className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-foreground leading-none mb-6">des Sports Extrêmes</span>
           </h1>
 
           {/* Subtitle */}
@@ -71,9 +76,9 @@ export const HeroSection = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 font-light leading-relaxed"
+            className="text-lg sm:text-xl text-black max-w-2xl mx-auto mb-10 font-light leading-relaxed"
           >
-            Vivez des sensations fortes et des moments inoubliables grâce à nos expériences aériennes haut de gamme, 
+            Vivez des sensations fortes et des moments inoubliables grâce à nos expériences aériennes haut de gamme,
             conçues pour vous offrir liberté, adrénaline et émerveillement.
           </motion.p>
 

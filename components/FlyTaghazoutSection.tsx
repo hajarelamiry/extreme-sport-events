@@ -98,7 +98,7 @@ export const FlyTaghazoutSection = () => {
                 <a href="#reservation">Réserver FLY TAGHAZOUT</a>
               </Button>
               <Button variant="heroOutline" size="xl" asChild>
-                <a href="https://flytaghazout.com" target="_blank" rel="noopener noreferrer">Explorer FLY TAGHAZOUT</a>
+                <a href="https://flytaghazout.com" target="_blank" rel="noopener noreferrer">Explorer l’Expérience</a>
               </Button>
             </div>
           </motion.div>

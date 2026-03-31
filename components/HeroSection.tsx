@@ -81,14 +81,15 @@ export const HeroSection = () => {
           </motion.p>
 
           {/* CTAs */}
+          {/* CTAs */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
-            className="flex flex-col items-center justify-center gap-6"
+            className="flex flex-col items-center justify-center"
           >
             {/* Buttons */}
-            <div className="flex flex-col sm:flex-row items-center gap-4">
+            <div className="flex flex-col sm:flex-row items-center gap-4 mb-3">
               <Button variant="hero" size="xl" asChild>
                 <a href="#reservation">Réserver votre expérience</a>
               </Button>

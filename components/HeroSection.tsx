@@ -5,9 +5,7 @@ import { Button } from "@/components/ui/button";
 
 export const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image — no scale, simple dark overlay */}
-      <div className="absolute inset-0">
+    <section className="relative min-h-[calc(100vh-80px)] flex items-center justify-center overflow-hidden">  <div className="absolute inset-0">
         <img
           src="/images/hero-bg.jpg"
           alt="Paramoteur au-dessus des falaises du Maroc"
@@ -114,7 +112,6 @@ export const HeroSection = () => {
             transition={{ duration: 2, repeat: Infinity }}
             className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
           >
-            <span className="text-xs uppercase tracking-widest">Scroll</span>
             <ChevronDown className="w-6 h-6" />
           </motion.a>
         </motion.div>

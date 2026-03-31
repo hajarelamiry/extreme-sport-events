@@ -889,6 +889,12 @@ h1, h2, h3, h4, h5, h6 {
 .mt-auto{
   margin-top: auto;
 }
+.mt-10{
+  margin-top: 2.5rem;
+}
+.mt-20{
+  margin-top: 5rem;
+}
 .block{
   display: block;
 }
@@ -1033,6 +1039,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 .min-h-svh{
   min-height: 100svh;
+}
+.min-h-\[calc\(100vh-80px\)\]{
+  min-height: calc(100vh - 80px);
 }
 .w-0{
   width: 0px;
@@ -1860,6 +1869,9 @@ h1, h2, h3, h4, h5, h6 {
 .pt-4{
   padding-top: 1rem;
 }
+.pt-20{
+  padding-top: 5rem;
+}
 .text-left{
   text-align: left;
 }
@@ -2075,6 +2087,11 @@ h1, h2, h3, h4, h5, h6 {
 .shadow-xl{
   --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.shadow-\[0_0_20px_hsl\(349_100\%_41\%\/0\.1\)\]{
+  --tw-shadow: 0 0 20px hsl(349 100% 41%/0.1);
+  --tw-shadow-colored: 0 0 20px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 .shadow-card{

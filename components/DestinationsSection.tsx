@@ -79,7 +79,7 @@ export const DestinationsSection = () => {
               transition={{ duration: 0.6, delay: index * 0.15 }}
               className={`group relative rounded-2xl p-8 border transition-all duration-500 ${
                 destination.featured
-                  ? "bg-gradient-card border-primary/50 shadow-glow"
+                  ? "bg-gradient-card border-primary/30 shadow-[0_0_20px_hsl(349_100%_41%/0.1)]"
                   : "bg-card/50 border-border hover:border-primary/30"
               }`}
             >

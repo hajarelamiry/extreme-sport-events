@@ -35,7 +35,7 @@ export const Footer = () => {
   return (
     <footer className="bg-background border-t border-border">
       {/* Main Footer */}
-      <div className="container mx-auto px-4 lg:px-8 py-16">
+      <div className="container py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12">
           {/* Brand */}
           <div className="lg:col-span-2">
@@ -131,7 +131,7 @@ export const Footer = () => {
 
       {/* Bottom Bar */}
       <div className="border-t border-border">
-        <div className="container mx-auto px-4 lg:px-8 py-6">
+        <div className="container py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-sm text-muted-foreground">
               © {new Date().getFullYear()} HOVERSWITCH, appuyé par MONARK IT. Tous droits réservés.

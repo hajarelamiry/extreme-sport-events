@@ -45,7 +45,7 @@ export const HeroSection = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 lg:px-8 text-center">
+      <div className="relative z-10 container text-center">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -135,7 +135,7 @@ export const HeroSection = () => {
   ].map((stat, index) => (
     <div key={index} className="text-right">
       <div className="font-display text-2xl 2xl:text-3xl text-primary">{stat.value}</div>
-      <div className="text-xs text-muted-foreground uppercase tracking-wider">{stat.label}</div>
+      <div className="text-xs text-foreground uppercase tracking-wider">{stat.label}</div>
     </div>
   ))}
 </motion.div>

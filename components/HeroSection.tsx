@@ -121,23 +121,24 @@ export const HeroSection = () => {
       </div>
 
       {/* Side Stats */}
-      <motion.div
-        initial={{ opacity: 0, x: 50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ delay: 1, duration: 0.8 }}
-        className="absolute right-8 top-1/2 -translate-y-1/2 hidden xl:flex flex-col gap-8"
-      >
-        {[
-          { value: "15+", label: "Ans d'expérience" },
-          { value: "5000+", label: "Vols réalisés" },
-          { value: "100%", label: "Sécurité" },
-        ].map((stat, index) => (
-          <div key={index} className="text-right">
-            <div className="font-display text-3xl text-primary">{stat.value}</div>
-            <div className="text-xs text-muted-foreground uppercase tracking-wider">{stat.label}</div>
-          </div>
-        ))}
-      </motion.div>
+     // APRÈS
+<motion.div
+  initial={{ opacity: 0, x: 50 }}
+  animate={{ opacity: 1, x: 0 }}
+  transition={{ delay: 1, duration: 0.8 }}
+  className="absolute right-4 2xl:right-8 top-1/2 -translate-y-1/2 hidden lg:flex flex-col gap-6"
+>
+  {[
+    { value: "15+", label: "Ans d'expérience" },
+    { value: "5000+", label: "Vols réalisés" },
+    { value: "100%", label: "Sécurité" },
+  ].map((stat, index) => (
+    <div key={index} className="text-right">
+      <div className="font-display text-2xl 2xl:text-3xl text-primary">{stat.value}</div>
+      <div className="text-xs text-muted-foreground uppercase tracking-wider">{stat.label}</div>
+    </div>
+  ))}
+</motion.div>
     </section>
   );
 };

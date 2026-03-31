@@ -77,10 +77,10 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased;
-    font-family: 'Inter', sans-serif;
-    overflow-x: hidden; /* ✅ fix ajouté */
-    max-width: 100%; /* ✅ fix ajouté */
+     @apply bg-background text-foreground font-sans antialiased;
+  font-family: 'Inter', sans-serif;
+  overflow-x: clip; /* clip au lieu de hidden */
+  max-width: 100%;
   }
 
   h1, h2, h3, h4, h5, h6 {

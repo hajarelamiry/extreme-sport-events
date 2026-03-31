@@ -119,7 +119,7 @@ export const Footer = () => {
                 <Mail className="w-5 h-5 text-primary flex-shrink-0" />
                 <a
                   href="mailto:contact@extremesportsevents.ma"
-                  className="text-muted-foreground hover:text-primary transition-colors text-sm"
+                  className="text-muted-foreground hover:text-primary transition-colors text-sm break-all"
                 >
                   contact@extremesportsevents.ma
                 </a>

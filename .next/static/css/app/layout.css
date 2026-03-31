@@ -1426,6 +1426,9 @@ h1, h2, h3, h4, h5, h6 {
 .break-words{
   overflow-wrap: break-word;
 }
+.break-all{
+  word-break: break-all;
+}
 .rounded-2xl{
   border-radius: 1rem;
 }

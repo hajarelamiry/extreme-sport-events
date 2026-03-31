@@ -68,15 +68,20 @@
 @layer base {
   * {
     @apply border-border;
+    box-sizing: border-box; /* ✅ fix ajouté */
   }
 
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden; /* ✅ fix ajouté */
+    max-width: 100%; /* ✅ fix ajouté */
   }
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
     font-family: 'Inter', sans-serif;
+    overflow-x: hidden; /* ✅ fix ajouté */
+    max-width: 100%; /* ✅ fix ajouté */
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -172,7 +177,7 @@
 @keyframes slide-in-left {
   from { 
     opacity: 0;
-    transform: translateX(-60px);
+    transform: translateX(-30px); /* ✅ réduit de -60px à -30px */
   }
   to { 
     opacity: 1;

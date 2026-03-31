@@ -25,20 +25,11 @@ function row(label: string, value: string) {
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { recaptchaToken } = body;
+    
 
-    // reCAPTCHA v3
-    if (!recaptchaToken) {
-      return NextResponse.json({ error: "reCAPTCHA manquant" }, { status: 400 });
-    }
-    const verifyRes = await fetch(
-      `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${recaptchaToken}`,
-      { method: "POST" }
-    );
-    const verifyData = await verifyRes.json();
-    if (!verifyData.success || verifyData.score < 0.5) {
-      return NextResponse.json({ error: "reCAPTCHA invalide" }, { status: 400 });
-    }
+    
+    
+    
 
     // Validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;

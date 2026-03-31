@@ -9,7 +9,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { toast } from "sonner";
-import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
 const activities = [
   { value: "paramoteur", label: "Paramoteur" },
@@ -26,7 +25,6 @@ export const ReservationSection = () => {
   const [selectedActivities, setSelectedActivities] = useState<string[]>([]);
   const [activitiesOpen, setActivitiesOpen] = useState(false);
   const [activitiesError, setActivitiesError] = useState(false);
-  const { executeRecaptcha } = useGoogleReCaptcha();
   const [isSuccess, setIsSuccess] = useState(false);
 
   const [name, setName]                 = useState("");
@@ -53,10 +51,7 @@ export const ReservationSection = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if (!executeRecaptcha) {
-      toast.error("reCAPTCHA non prêt, réessayez.");
-      return;
-    }
+    
 
     if (selectedActivities.length === 0) {
       setActivitiesError(true);
@@ -69,7 +64,6 @@ export const ReservationSection = () => {
     const form = e.target as HTMLFormElement;
 
     try {
-      const recaptchaToken = await executeRecaptcha("reservation_form");
 
       const res = await fetch("/api/reservation", {
         method: "POST",
@@ -82,7 +76,7 @@ export const ReservationSection = () => {
           participants,
           message,
           activities: selectedActivities,
-          recaptchaToken,
+          // recaptchaToken,
         }),
       });
 
